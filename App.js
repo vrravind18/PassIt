@@ -10,11 +10,12 @@ import {
   SafeAreaView,
 } from "react-native";
 import colors from "./app/config/colors";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
-  return <ViewImageScreen />;
+  return <ListingDetailsScreen />;
 }
 
 const styles = StyleSheet.create({
