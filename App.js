@@ -9,13 +9,18 @@ import {
   Alert,
   SafeAreaView,
 } from "react-native";
+
 import colors from "./app/config/colors";
+import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
+import AccountScreen from "./app/screens/AccountScreen";
+import LisitngScreens from "./app/screens/LisitngScreens";
 
 export default function App() {
-  return <ListingDetailsScreen />;
+  return <LisitngScreens />;
 }
 
 const styles = StyleSheet.create({
