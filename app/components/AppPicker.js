@@ -8,13 +8,13 @@ import {
   FlatList,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
 import AppText from "./AppText";
 import Screen from "./Screen";
 import defaultStyles from "../config/styles";
 import PickerItem from "./PickerItem";
 
 function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
+  // Hooks
   const [modalVisible, setModalVisible] = useState(false);
 
   // react.fragment is needed because we are returning multiple component (Touchable and Modal)

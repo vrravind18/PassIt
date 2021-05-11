@@ -18,7 +18,8 @@ const listings = [
     image: require("../assets/couch.jpg"),
   },
 ];
-function LisitngScreens(props) {
+
+function ListingScreens(props) {
   return (
     <Screen style={styles.screen}>
       <FlatList
@@ -43,4 +44,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LisitngScreens;
+export default ListingScreens;
