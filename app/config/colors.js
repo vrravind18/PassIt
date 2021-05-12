@@ -8,4 +8,11 @@ export default {
   danger: "#ff5252",
   yellow: "#ffe66d",
   red: "#ff0000",
+  orange: "#fd9644",
+  deepYellow: "#fed330",
+  green: "#26de81",
+  cyan: "#2bcbba",
+  lightBlue: "#45aaf2",
+  blue: "#4b7bec",
+  purple: "#8B008B",
 };

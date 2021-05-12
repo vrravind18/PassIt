@@ -8,6 +8,8 @@ import {
   SubmitButton,
   AppFormPicker,
 } from "../components/forms";
+import CategoryPickerItem from "../components/CategoryPickerItem";
+import colors from "../config/colors";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -17,9 +19,50 @@ const validationSchema = Yup.object().shape({
 });
 
 const categories = [
-  { label: "Furniture", value: 1 },
-  { label: "Clothing", value: 2 },
-  { label: "not Furniture", value: 3 },
+  {
+    label: "Furniture",
+    value: 1,
+    backgroundColor: colors.primary,
+    icon: "bed",
+  },
+  { label: "Cars", value: 2, backgroundColor: colors.orange, icon: "car" },
+  {
+    label: "Cameras",
+    value: 3,
+    backgroundColor: colors.deepYellow,
+    icon: "camera",
+  },
+  { label: "Games", value: 4, backgroundColor: colors.green, icon: "cards" },
+  {
+    label: "Clothing",
+    value: 5,
+    backgroundColor: colors.cyan,
+    icon: "shoe-heel",
+  },
+  {
+    label: "Sports",
+    value: 6,
+    backgroundColor: colors.lightBlue,
+    icon: "soccer",
+  },
+  {
+    label: "Movies & Music",
+    value: 7,
+    backgroundColor: colors.blue,
+    icon: "headphones",
+  },
+  {
+    label: "Books",
+    value: 8,
+    backgroundColor: colors.purple,
+    icon: "book",
+  },
+  {
+    label: "Other",
+    value: 9,
+    backgroundColor: colors.medium,
+    icon: "tag-outline",
+  },
 ];
 
 function ListingEditScreen(props) {
@@ -41,11 +84,16 @@ function ListingEditScreen(props) {
           keyboardType="numeric"
           maxLength={8}
           placeholder="Price"
+          width={120}
         />
         <AppFormPicker
           name="category"
           items={categories}
           placeholder="Category"
+          width="50%"
+          // remember if you do not supply these two props you will not see the item view
+          PickerItemComponent={CategoryPickerItem}
+          numberOfColumns={3}
         />
         <AppFormField
           name="description"
