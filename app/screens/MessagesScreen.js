@@ -8,8 +8,10 @@ import Screen from "../components/Screen";
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title:
+      "T1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ",
+    description:
+      "D1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ",
     image: require("../assets/viggy.jpeg"),
   },
   {
@@ -19,6 +21,8 @@ const initialMessages = [
     image: require("../assets/viggy.jpeg"),
   },
 ];
+
+// important tip is to always be aware of the the number of lines prop cause it affects how good the page looks
 
 function MessagesScreen(props) {
   // Hooks
@@ -46,6 +50,7 @@ function MessagesScreen(props) {
             renderRightActions={() => (
               <ListItemDeleteAction onPress={() => handleDelete(item)} />
             )}
+            showChevrons={true}
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
