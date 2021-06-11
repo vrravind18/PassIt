@@ -12,7 +12,7 @@ function WelcomeScreen({ navigation }) {
       source={require("../assets/background.jpg")}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
+        <Image style={styles.logo} source={require("../assets/Passit.png")} />
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 140,
+    height: 140,
   },
   logoContainer: {
     position: "absolute",
