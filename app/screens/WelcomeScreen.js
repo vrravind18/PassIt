@@ -2,6 +2,7 @@ import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
 import AppButton from "../components/AppButton";
+import colors from "../config/colors";
 import routes from "../navigation/routes";
 
 function WelcomeScreen({ navigation }) {
@@ -13,7 +14,7 @@ function WelcomeScreen({ navigation }) {
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/Passit.png")} />
-        <Text style={styles.tagline}>Sell What You Don't Need</Text>
+        <Text style={styles.tagline}>Pass on what you don't need</Text>
       </View>
       <View style={styles.buttonsContainer}>
         <AppButton
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: "600",
     paddingVertical: 20,
+    color: "#A8A8A8",
   },
 });
 
