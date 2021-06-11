@@ -1,4 +1,4 @@
-# DoneWithIt
+# PassIt
 
 Home screen:
 
